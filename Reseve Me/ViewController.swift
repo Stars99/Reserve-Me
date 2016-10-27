@@ -64,18 +64,7 @@ class ViewController: UIViewController {
         
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 0
-    }
     
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        
-//        return 0
-//    }
-//    
-    
-    
-  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -84,14 +73,44 @@ class ViewController: UIViewController {
     
     
     @IBAction func didPressDate(_ sender: UIButton) {
-       
+       //Hide the current time onc ethe button is pressed
         currentTimeLabel.isHidden = true
-        
         var dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE h:mm:ss a"
         var strDate = dateFormatter.string(from: datePicker.date)
        // self.selectedDate.text = strDate
         todayDateLabel.text = strDate
+        
+        datePicker.maximumDate = Date()
+        
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let userCalendar = NSCalendar.current
+        let currentDateComponents = NSDateComponents()
+        currentDateComponents.year = (calendar as NSCalendar).component(.year, from: date)
+        currentDateComponents.month = (calendar as NSCalendar).component(.month, from: date)
+        currentDateComponents.day = (calendar as NSCalendar).component(.day, from: date)
+        
+        let currentDate = userCalendar.date(from: currentDateComponents as DateComponents)
+        let todayDate = currentDateComponents.day
+        //let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let convertedDate = dateFormatter.string(from: currentDate!)
+        
+
+        let todaysDate = NSDate()
+        
+        let futureDate = todayDate + 7
+        
+        datePicker.minimumDate = todaysDate as Date
+        
+
+       // datePicker.maximumDate = futureDate as Date
+        
+       // datePicker.minimumDate = currentDate!-1
+        
+
     
     }
 
