@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DO5-B8-jDF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Jzr-9S-jil">
+            <objects>
+                <viewController id="5I6-ar-xRo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VSD-PE-2wV"/>
+                        <viewControllerLayoutGuide type="bottom" id="imY-Pw-NhZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Fo-WG-BQl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-Z0-Dbn">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="DO5-B8-jDF" kind="modal" identifier="signInSegue" id="zbh-Bs-HIS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rE-Kt-tpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1506" y="-142"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="SDK-f9-CIF">
+            <objects>
+                <viewController id="DO5-B8-jDF" customClass="LoginViewController" customModule="Reseve_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NG8-Sj-7F0"/>
+                        <viewControllerLayoutGuide type="bottom" id="gqU-Vg-1pZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9SN-I6-KZW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYY-PG-p7F">
+                                <frame key="frameInset"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vie-CV-hQL" userLabel="FieldParentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="409"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="PONG.2.ai[2]" translatesAutoresizingMaskIntoConstraints="NO" id="vfS-gL-5f7">
+                                                <frame key="frameInset" minX="101" minY="36" width="180" height="138"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Sign In form1" translatesAutoresizingMaskIntoConstraints="NO" id="pUr-ag-J75">
+                                                <frame key="frameInset" minX="25" minY="182" width="332" height="212"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HA6-II-oOX">
+                                                <frame key="frameInset" minX="51" minY="224" width="277" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeB-6k-rTX">
+                                                <frame key="frameInset" minX="51" minY="296" width="273" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BO-0U-qBn">
+                                                <frame key="frameInset" minX="221" minY="368" width="42" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <segue destination="KSH-m2-eUz" kind="modal" id="E8x-WT-zX5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7n-eQ-3NR" userLabel="ButtonParentView">
+                                        <rect key="frame" x="0.0" y="543" width="375" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Next Button1 " translatesAutoresizingMaskIntoConstraints="NO" id="6Jo-6y-Vb1">
+                                                <frame key="frameInset" minY="42" width="375" height="82"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="xaL-Ig-51X">
+                                                <frame key="frameInset" minX="309" minY="83" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yic-K6-c72">
+                                                <frame key="frameInset" minX="16.85%" width="286" height="30" maxY="11"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <connections>
+                                                    <action selector="didTapSignIn:" destination="DO5-B8-jDF" eventType="touchUpInside" id="cQ8-FA-XKh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonParentView" destination="g7n-eQ-3NR" id="Zqk-wb-yDQ"/>
+                        <outlet property="emailField" destination="HA6-II-oOX" id="6bS-2j-6SQ"/>
+                        <outlet property="fieldParentView" destination="vie-CV-hQL" id="WwV-gG-4RP"/>
+                        <outlet property="passwordField" destination="CeB-6k-rTX" id="p1C-PD-hLd"/>
+                        <outlet property="signinScrollView" destination="NYY-PG-p7F" id="EfC-gg-ygr"/>
+                        <outlet property="signinSpinner" destination="xaL-Ig-51X" id="kCm-bP-FWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIg-Wx-eMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-616.79999999999995" y="-131.78410794602701"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="4f2-ga-S3i">
+            <objects>
+                <viewController id="KSH-m2-eUz" customClass="SignUpViewController" customModule="Reseve_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I4W-Ln-bpW"/>
+                        <viewControllerLayoutGuide type="bottom" id="eWt-Oz-0Dz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X2z-AE-uLe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBX-t8-l5l">
+                                <frame key="frameInset" minY="73" width="375" height="594"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ChO-mG-G9k" userLabel="FieldParentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="signUpform2x" translatesAutoresizingMaskIntoConstraints="NO" id="Apj-tb-sOw">
+                                                <frame key="frameInset" minX="40" minY="38" width="280" height="300"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-u8-PUT">
+                                                <frame key="frameInset" minX="37" minY="156" width="301" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdL-kl-h1z">
+                                                <frame key="frameInset" minX="40" minY="238" width="301" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-07-iSN">
+                                                <frame key="frameInset" minX="40" minY="308" width="301" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="photo2X" translatesAutoresizingMaskIntoConstraints="NO" id="3wl-NS-bTI">
+                                                <frame key="frameInset" minX="139" minY="38" width="82" height="82"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-1g-KT0">
+                                                <frame key="frameInset" minX="146" minY="57" width="60" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didTapPhoto:" destination="KSH-m2-eUz" eventType="touchUpInside" id="Mgd-tr-eXv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-X2-okW" userLabel="ButtonParentView">
+                                        <rect key="frame" x="0.0" y="482" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Next Button1 " translatesAutoresizingMaskIntoConstraints="NO" id="liB-5N-DPT">
+                                                <frame key="frameInset" minY="36" width="375" height="79"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9z-Il-Wc2">
+                                                <frame key="frameInset" minY="55" width="301" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didTapSignUp:" destination="KSH-m2-eUz" eventType="touchUpInside" id="Zgt-lz-yew"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="053-Ee-NwK">
+                                                <frame key="frameInset" minX="91.14%" width="25" height="18" maxY="15"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="sign Up Nave bar" translatesAutoresizingMaskIntoConstraints="NO" id="goa-VV-z0X">
+                                <frame key="frameInset" minY="-1" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonParentView" destination="WxO-X2-okW" id="PoI-eG-XXY"/>
+                        <outlet property="emailField" destination="KdL-kl-h1z" id="26p-NP-v4N"/>
+                        <outlet property="fieldParentView" destination="ChO-mG-G9k" id="g5X-kX-am3"/>
+                        <outlet property="nameField" destination="JwV-u8-PUT" id="Mas-VA-Ken"/>
+                        <outlet property="passwordField" destination="xr2-07-iSN" id="D4T-qh-dd3"/>
+                        <outlet property="profilePhotoImageView" destination="3wl-NS-bTI" id="60x-QZ-Oom"/>
+                        <outlet property="signUpScrollView" destination="eBX-t8-l5l" id="wh8-5Y-Phu"/>
+                        <outlet property="signUpSpinner" destination="053-Ee-NwK" id="TaV-Ib-y3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYt-m3-tn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="-143.47826086956522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Next Button1 " width="375" height="50"/>
+        <image name="PONG.2.ai[2]" width="792" height="612"/>
+        <image name="Sign In form1" width="332" height="212"/>
+        <image name="Splash" width="187" height="333"/>
+        <image name="photo2X" width="82" height="82"/>
+        <image name="sign Up Nave bar" width="375" height="66"/>
+        <image name="signUpform2x" width="280" height="300"/>
+    </resources>
+</document>
