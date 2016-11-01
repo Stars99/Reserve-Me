@@ -131,7 +131,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
         if names[indexPath.row] == "Alexander Sung"  {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let eventVC = storyboard.instantiateViewController(withIdentifier: "eventViewController") as! ViewController
+            let eventVC = storyboard.instantiateViewController(withIdentifier: "reserveVC") as! ReserveTableViewController
             self.present(eventVC, animated: true, completion: nil)
         }
         else {
