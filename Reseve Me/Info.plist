@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string> $(PRODUCT_NAME) photo use</string>
+	<key>NSCameraUsageDescription</key>
+	<string> $(PRODUCT_NAME) photo use</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -23,7 +27,13 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
+<<<<<<< HEAD
 	<string>Schedule</string>
+=======
+	<string>Login</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+>>>>>>> master
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
