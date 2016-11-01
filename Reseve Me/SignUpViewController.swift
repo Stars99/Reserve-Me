@@ -116,7 +116,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         alertController.addAction(OKAction)
         //Present View controller
         self.present(alertController, animated: true, completion: nil)
-
+        
         
         // let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
         
@@ -147,12 +147,44 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func didTapPhoto(_ sender: AnyObject) {
+        let alertController = UIAlertController(title: nil, message: "Upload Profile Image", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        alertController.addAction(cancelAction)
         
-        var photoPickerController = UIImagePickerController()
-        photoPickerController.delegate=self
-        photoPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        let OKAction = UIAlertAction(title: "Choose Photo", style: .default) { (action) in
+            var photoPickerController = UIImagePickerController()
+            photoPickerController.delegate=self
+            photoPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            self.present(photoPickerController, animated: true, completion: nil)
+            
+        }
+        alertController.addAction(OKAction)
         
-        self.present(photoPickerController, animated: true, completion: nil)
+        let destroyAction = UIAlertAction(title: "Take Photo", style: .destructive) { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+                var photoPickerController = UIImagePickerController()
+                photoPickerController.delegate=self
+                photoPickerController.sourceType = UIImagePickerControllerSourceType.camera
+                self.present(photoPickerController, animated: true, completion: nil)
+                
+                
+            }
+        }
+        alertController.addAction(destroyAction)
+
+        
+        self.present(alertController, animated: true) {
+            // ...
+        }
+        
+            
+            
+            
+            
+            
+            
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
@@ -168,38 +200,40 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     
-    @IBAction func cameraButton(_ sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            var photoPickerController = UIImagePickerController()
-            photoPickerController.delegate=self
-            photoPickerController.sourceType = UIImagePickerControllerSourceType.camera
-            
-            self.present(photoPickerController, animated: true, completion: nil)
-        }
+    //         @IBAction func cameraButton(_ sender: AnyObject) {
+    //                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+    //                    var photoPickerController = UIImagePickerController()
+    //                    photoPickerController.delegate=self
+    //                    photoPickerController.sourceType = UIImagePickerControllerSourceType.camera
+    //
+    //         self.present(photoPickerController, animated: true, completion: nil)
+    //    }
+    //
+    //
+    //
+    //
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
+    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-
-
-}
