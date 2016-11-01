@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         signUpScrollView.contentSize = signUpScrollView.frame.size
         signUpScrollView.contentInset.bottom = 100
         buttonInitialY = buttonParentView.frame.origin.y
-        buttonOffset = -140
+        buttonOffset = -150
         
         NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow , object: nil, queue: OperationQueue.main){(notification: Notification) in
             
@@ -154,10 +154,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         alertController.addAction(cancelAction)
         
         let OKAction = UIAlertAction(title: "Choose Photo", style: .default) { (action) in
+            
             var photoPickerController = UIImagePickerController()
             photoPickerController.delegate=self
             photoPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
             self.present(photoPickerController, animated: true, completion: nil)
+            //set image
+           // profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+
             
         }
         alertController.addAction(OKAction)
@@ -178,26 +182,34 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.present(alertController, animated: true) {
             // ...
         }
-        
-            
-            
-            
-            
-            
+    
             
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-    {
+    
+    
+    @IBAction func didTapExit(_ sender: UIButton) {
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to cancel?", preferredStyle: .alert)
+       // let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        dismiss(animated: true, completion: nil)
         
-        
-        //set image
-        profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
-        
-        self.dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+//    {
+//        
+//        
+//        //set image
+//        profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+//        
+//        
+//        self.dismiss(animated: true, completion: nil)
+//    }
+//    
     
     
     //         @IBAction func cameraButton(_ sender: AnyObject) {
@@ -213,25 +225,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     //
     //
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     
     
