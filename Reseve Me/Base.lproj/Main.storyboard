@@ -103,10 +103,6 @@
                                     <segue destination="A7q-qE-Dl2" kind="modal" identifier="lengthOfPlaySegue" id="fdZ-Pn-j8n"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bat" id="YRg-SF-rJQ">
-                                <frame key="frameInset" minX="69" minY="144" width="238" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -250,7 +246,6 @@
     <resources>
         <image name="Screen Shot 2016-10-28 at 4.13.40 PM" width="658" height="1126"/>
         <image name="backnaveBar" width="750" height="134"/>
-        <image name="bat" width="550" height="512"/>
         <image name="calendar-icon" width="1024" height="1024"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
