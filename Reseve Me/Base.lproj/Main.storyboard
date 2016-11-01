@@ -202,7 +202,7 @@
                                     <outlet property="delegate" destination="A7q-qE-Dl2" id="OzZ-y7-ivH"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backnaveBar" id="ihf-2U-lld">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backnaveBar1" id="ihf-2U-lld">
                                 <frame key="frameInset" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -245,7 +245,7 @@
     </scenes>
     <resources>
         <image name="Screen Shot 2016-10-28 at 4.13.40 PM" width="658" height="1126"/>
-        <image name="backnaveBar" width="750" height="134"/>
+        <image name="backnaveBar1" width="750" height="134"/>
         <image name="calendar-icon" width="1024" height="1024"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
